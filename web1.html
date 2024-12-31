@@ -35,7 +35,7 @@ nav ul li {
 }
 
 nav ul li a {
-    color: blue;
+    color: white;
     text-decoration: none;
     font-size:30px;
 }
@@ -71,18 +71,128 @@ h2 {
 
 
 }
-button{
-    font-style: italic;
-    background-color: gray;
-    
+
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
 }
 
-footer {
+header {
+    background-color: #007BFF;
+    color: white;
+    padding: 20px;
     text-align: center;
-    background-color:gray;
-    padding:10px;
-    font-size:50px;
-    color: blue;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.search-input {
+    border: 2px solid #ccc;
+    border-radius: 25px 0 0 25px;
+    padding: 10px 15px;
+    font-size: 16px;
+    flex: 1; 
+    outline: none; 
+}
+
+.search-button {
+    background-color: #0056b3;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 0 25px 25px 0;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.search-button:hover {
+    background-color: #004494; 
+}
+@media (max-width: 600px) {
+    .search-container {
+        flex-direction: column; 
+    }
+
+    .search-button {
+        width: 100%; 
+        margin-top: 10px; 
+        border-radius: 25px; 
+    }
+}
+ #section{
+    background-color: #451;
+    display:grid ;
+    grid-template-columns: 1fr 2.5fr;
+    grid-template-rows: 1fr;
+    gap: 10px;
+ }
+ #left,#right{
+    background-color:blueviolet;
+ }
+ #right{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 3fr;
+    gap: 10px;
+
+ }
+ #r_top,#r_btm{
+    background-color: #875;
+ }
+ #contactus{
+       
+    width: 100vw;
+    height: 22vh;
+    background-color:black;
+   }
+ 
+   .cutus{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+   }
+   .cu1{
+    color: white;
+    font-size: 20px;
+   }
+   .cu2{
+    color: white;
+    font-size: 20px;
+   }
+   .cu3{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+   }
+   .cu30{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 1s;
+   }
+   .cu30:hover{
+    transform:translateY(20px);
+
+   }
 </style>
 <body>
     <header >
@@ -96,14 +206,13 @@ footer {
                 <li><a href="#thriller">Thriller</a></li>
             </ul>
         </nav>
-        <nav class="navbar bg-body-tertiary">
-  <div class="container-fluid">
-    <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" size="80px">
-      <button class="btn btn-outline-success" type="submit" >Search</button>
+    <div class="search-container">
+        <form action="https://www.google.com/search" method="get" class="search-bar">
+        <input type="text" class="search-input" placeholder="Search...">
+        <button class="search-button">Search</button>
     </form>
-  </div>
-</nav>
+    </div>
+
     </header>
 
     <main>
@@ -218,7 +327,20 @@ footer {
     </main>
 
     <footer>
-        <p>&copy; 2024 Drama Theatre. All rights reserved.</p>
+        
+                <section id="contactus">
+        <div class="cutus">
+        <div class="cu1">Privacy Policy | Terms of Use | Contact Support </div>
+<div class="cu2"> Copyright |All Right Reserved </div>
+<div class="cu3">
+    <div class="cu33 cu30"> <img src="insta.svg" alt=""></div> 
+    <div class="cu34 cu30"> <img src="youtub.svg" alt=""></div> 
+    <div class="cu32 cu30"> <img src="twitter.svg" alt=""></div>
+    <div class="cu35 cu30"> <img src="t.svg" alt=""></div> 
+    <div class="cu31 cu30"> <img src="p.svg" alt=""></div>
+</div>
+    </section>
     </footer>
+
 </body>
 </html>
